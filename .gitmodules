@@ -1,12 +1,12 @@
 [submodule "packages/pear-apps-lib-feedback"]
 	path = packages/pear-apps-lib-feedback
-	url = ../pear-apps-lib-feedback.git
+	url = https://github.com/tetherto/pear-apps-lib-feedback.git
 [submodule "packages/pear-apps-lib-ui-react-hooks"]
 	path = packages/pear-apps-lib-ui-react-hooks
-	url = ../pear-apps-lib-ui-react-hooks.git
+	url = https://github.com/tetherto/pear-apps-lib-ui-react-hooks.git
 [submodule "packages/pear-apps-utils-avatar-initials"]
 	path = packages/pear-apps-utils-avatar-initials
-	url = ../pear-apps-utils-avatar-initials.git
+	url = https://github.com/tetherto/pear-apps-utils-avatar-initials.git
 [submodule "packages/pear-apps-utils-date"]
 	path = packages/pear-apps-utils-date
 	url = ../pear-apps-utils-date.git
