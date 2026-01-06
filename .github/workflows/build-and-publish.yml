@@ -62,12 +62,11 @@ jobs:
 
       - name: Install worker dependencies
         run: |
-          git config --global url."https://github.com/".insteadOf git@github.com:
-          git config --global url."https://github.com/".insteadOf "ssh://git@github.com/"
-          git config --global url."https://".insteadOf ssh://
-          git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
-          git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://git@github.com/"
+          # Force all GitHub URLs (SSH + HTTPS) to use PAT over HTTPS
           git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "ssh://git@github.com/"
+          git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "git@github.com:"
+          git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+          
           npm install --install-links --legacy-peer-deps
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PAT_TOKEN }}
@@ -257,12 +256,11 @@ jobs:
 
       - name: Install worker dependencies
         run: |
-          git config --global url."https://github.com/".insteadOf git@github.com:
-          git config --global url."https://github.com/".insteadOf "ssh://git@github.com/"
-          git config --global url."https://".insteadOf ssh://
-          git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
-          git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://git@github.com/"
+          # Force all GitHub URLs (SSH + HTTPS) to use PAT over HTTPS
           git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "ssh://git@github.com/"
+          git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "git@github.com:"
+          git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+          
           npm install --install-links --legacy-peer-deps
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PAT_TOKEN }}
