@@ -61,9 +61,9 @@ jobs:
 
       - name: Install worker dependencies
         run: |
-          # git config --global url."https://github.com/".insteadOf git@github.com:
-          # git config --global url."https://".insteadOf ssh://
-          # git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+          git config --global url."https://github.com/".insteadOf git@github.com:
+          git config --global url."https://".insteadOf ssh://
+          git config --global url."https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
           npm install --install-links --legacy-peer-deps
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PAT_TOKEN }}
