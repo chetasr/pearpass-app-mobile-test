@@ -157,7 +157,7 @@ jobs:
             APK_PROFILE=preview-apk
           fi
           echo "APK_PROFILE=$APK_PROFILE" >> "$GITHUB_OUTPUT" 
-           
+
       - name: Build APK for GitHub release
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
